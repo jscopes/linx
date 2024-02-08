@@ -1,0 +1,1065 @@
+/* +Custom CSS */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $background;
+}
+
+#page-wrapper {
+  padding: 0;
+}
+
+.sans-serif {
+  font-family: 'Montserrat', sans-serif;
+}
+.serif {
+  /*font-family: 'Lora', serif;*/
+  font-family: 'Zilla Slab', serif;
+}
+
+.no-gutters {
+  @extend .g-0;
+}
+
+.bg-gray {
+  background-color: $gray-light;
+  color: $reverse;
+}
+
+.btn-primary {
+  background-color: $blue;
+  border-color: $blue;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  background-color: $red;
+  border-color: $red;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
+.img-object-fit img {
+  object-fit: cover;
+  min-height: 100%;
+  width: 100%;
+}
+
+.site {
+  background-color: #ffffff;
+}
+
+h1 {
+  @extend .serif;
+}
+
+h2,h3,h4,h5,h6,h7 {
+  @extend .sans-serif;
+}
+
+.template-hero {
+  h2, h3 {
+    text-align: center;
+  }
+}
+
+#solutions-block .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.solutions-tile {
+  background-color: #dfe5ec;
+  border: 2px solid white;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 44%;
+  }
+  h4 {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 80%;
+    z-index: 11;
+    padding: 10px;
+    background-color: $blue;
+    color: #fff;
+    opacity: .7;
+    a {
+      text-decoration: none;
+      @extend .serif;
+      color: #fff;
+    }
+  }
+  .solutions-color {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    transition: all .3s ease;
+    z-index: 9;
+    opacity: .3;
+  }
+  .solutions-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 7;
+    opacity: .6;
+  }
+  &:hover {
+    h4,a {
+      color: #fff;
+    }
+    .solutions-color {
+      height: 100%;
+    }
+  }
+}
+
+#industries-block .row {
+  border: 2px solid #fff;
+  border-bottom: 0 none;
+}
+.industry-tile {
+  background-color: #dfe5ec;
+  background: linear-gradient(to bottom, rgba(223,229,236,1) 0%, rgba(250,251,252,1) 40%, rgba(250,251,252,1) 100%);
+  border-left: 2px solid white;
+  text-align: center;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 80%;
+  }
+  h4,a {
+    position: absolute;
+    bottom: 18%;
+    width: 100%;
+    z-index: 11;
+    text-align: center;
+  }
+  .industry-icon {
+    position: absolute;
+    z-index: 10;
+    bottom: 45%;
+    width: 100%;
+    text-align: center;
+    transition: all .3s ease;
+  }
+  .industry-color {
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    transition: all .3s ease;
+  }
+
+  &:nth-child(1) {
+    border-left: 0 none;
+    .industry-color {
+      background-color: #55489d !important;
+    }
+  }
+  &:nth-child(2) .industry-color {
+    background-color: #d468d0 !important;
+  }
+  &:nth-child(3) .industry-color {
+    background-color: #4db595 !important;
+  }
+  &:nth-child(4) .industry-color {
+    background-color: #a28fe8 !important;
+  }
+  &:nth-child(5) .industry-color {
+    background-color: #ef6528 !important;
+  }
+  &:nth-child(6) .industry-color {
+    background-color: #8ccad4 !important;
+  }
+
+  &:hover {
+    h4,a {
+      color: #fff;
+    }
+    .industry-icon img {
+      filter: brightness(0) invert(1);
+    }
+    .industry-color {
+      height: 100%;
+    }
+  }
+}
+
+.wpforms-submit {
+  margin-left:50% !important;
+  transform:translateX(-50%) !important;
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+  background-color:white !important;
+  border: 1px solid darkgray !important;
+  color:#000 !important;
+}
+.wpforms-submit:hover {
+  background-color:$blue !important;
+  border: 1px solid darkgray !important;
+  color:#fff !important;
+}
+
+div.wpforms-container-full.contact-us-module {
+  padding: 0;
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 0 15%;
+  }
+  .wpforms-title {
+    @extend h2;
+  }
+
+  .wpforms-form {
+    .wpforms-field-name {
+      float: left;
+      width: 50%;
+      clear: none;
+      padding-right: 10px;
+      input {
+        width: 100%;
+        max-width: none;
+      }
+    }
+    .wpforms-field-email {
+      float: left;
+      width: 50%;
+      clear: right;
+      padding-left: 10px;
+      input {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}
+
+.bg-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  big {
+    font-size: 2.1rem;
+  }
+  strong {
+    font-size: 2rem;
+    color: $link-reverse;
+  }
+
+  @media only screen and (min-width: $breakpoint-md)  {
+    font-size: 1.3rem;
+    big {
+      font-size: 2.0rem;
+    }
+    strong {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-lg)  {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    big {
+      font-size: 2.4rem;
+    }
+    strong {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.bg-quote {
+  @extend .bg-text;
+  background-image: url("icons/quotes-icon-white-25.png");
+  background-repeat: no-repeat;
+  background-position: 10% 6%;
+  background-size: 30%;
+
+  @media only screen and (min-width: $breakpoint-lg)  {
+    background-size: 48%;
+  }
+}
+
+.container.indent-left {
+  @media ( min-width: $breakpoint-lg ) {
+    padding-left: calc(15px + 12.5%); // mimic offset-2
+    padding-right: calc(15px + 8.33333%); // mimic offset-1
+  }
+}
+
+.logo-col {
+  text-align: center;
+
+  .navbar-brand.custom-logo-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+
+    > img {
+      max-width: 210px;
+    }
+
+    @media ( min-width: 420px ) {
+      > img {
+        max-width: 280px;
+      }
+    }
+  }
+
+  @media ( min-width: $breakpoint-md ) {
+    text-align: left;
+  }
+}
+
+.util-nav-wrap {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 12px;
+
+  @media ( min-width: $breakpoint-md ) {
+    justify-content: flex-end;
+  }
+}
+
+.util-nav {
+  background: $blue;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      list-style-type: none;
+      font-size: 13px;
+      line-height: 14px;
+      color: $reverse;
+      text-transform: uppercase;
+      padding-left: 10px;
+
+      > a {
+        color: $link-reverse;
+        font-weight: 500;
+        padding: 0;
+
+        &:hover {
+          color: $link-reverse;
+          text-decoration: underline !important;
+        }
+      }
+
+      &:first-child {
+        padding:0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 390px)  {
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+  @media only screen and (min-width: 440px)  {
+    ul {
+      li {
+        padding-left: 22px;
+      }
+    }
+  }
+  @media only screen and (min-width: $breakpoint-mob-menu-end)  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+#main-nav {
+  background-color: $gray-light;
+}
+
+#navbarNavDropdown {
+  justify-content: center;
+}
+
+
+.template-hero {
+  min-height: 300px;
+
+  article {
+    margin-bottom: 0;
+    border-bottom: 0 none;
+  }
+
+  .container {
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      @media only screen and (min-width: $breakpoint-md)  {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      &:last-child { margin-bottom: 10px; }
+    }
+    .wp-block-column ul {
+      padding-left: 20px;
+      li {
+        list-style-type: square;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .column-content {
+    a { text-decoration: underline; }
+    .category-item,
+    .entry-footer,
+    h1, h2, h3, h4, h5, h6 {
+      a { text-decoration: none;}
+    }
+  }
+
+}
+
+#post-23 {
+  .entry-header {
+    display: none;
+  }
+}
+
+#wrapper-hero {
+  .wp-block-group {
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+
+    .wp-block-image {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .wp-block-group__inner-container {
+      @extend .container;
+    }
+
+    h2 {
+      @extend .serif;
+      color: white;
+      font-size: 1.5rem;
+      position: relative;
+      //margin-left: 10%;
+    }
+    p {
+      @extend .serif;
+      color: white;
+      font-size: 1rem;
+      position: relative;
+      //margin-left: 10%;
+    }
+  }
+
+}
+
+#main-menu {
+  text-transform: uppercase;
+  text-align: center;
+
+  .nav-item {
+    padding: 0 .2rem;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: $blue;
+
+    &:after {
+      transition: all .3s ease;
+    }
+
+    &.show {
+      border-left: 1px solid $gray-light;
+      border-right: 1px solid $gray-light;
+      background: linear-gradient(to bottom, rgba(222,217,232,.6) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%);
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .dropdown-menu {
+    text-align: center;
+    border: 1px solid $gray-light;
+    border-top: 0 none;
+    margin: 0;
+  }
+
+  @media only screen and (min-width: $breakpoint-md)  {
+    text-align: left;
+
+    &.navbar-nav .nav-link {
+      font-size: .9rem;
+      padding: .3rem .3rem;
+      border-left: 0 none;
+      border-right: 0 none;
+    }
+
+    .dropdown-item {
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+
+    .dropdown-menu {
+      //text-align: left;
+      //box-shadow: 3px 3px 3px #888888;
+      padding: .25rem .75rem;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+  @media only screen and (min-width: 850px)  {
+    &.navbar-nav .nav-link {
+      font-size: 1rem;
+      padding: .2rem .35rem;
+    }
+  }
+  @media only screen and (min-width: 930px)  {
+    &.navbar-nav .nav-link {
+      font-size: 1.1rem;
+      padding: 0 .5rem;
+    }
+  }
+}
+
+.page-links {
+  @extend .sans-serif;
+  color: $gray;
+
+  a {
+    color: $gray;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .75rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li + li::before {
+    display: inline-block;
+    padding: 0 10px;
+    content: "|";
+  }
+}
+
+
+#hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  > .container {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-inner {
+    padding: 6rem 0 2rem;
+    margin: 0 auto;
+    .inner-wrap {
+      padding: 1rem 0.5rem 0;
+    }
+  }
+  .title, .page-name {
+    @extend .serif;
+    color: $reverse;
+    text-shadow: 2px 2px 5px $blue;
+  }
+  .page-name h1 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .page-links {
+    color: $blue;
+    a {
+      color: $blue;
+    }
+  }
+  @media only screen and (min-width: 500px)  {
+    .hero-inner {
+      padding: 6rem 0 0;
+      .inner-wrap {
+        padding: 1.5rem 0.5rem;
+      }
+    }
+  }
+  @media only screen and (min-width: $breakpoint-md)  {
+    .hero-inner {
+      margin-left: 4rem;
+      margin-right: auto;
+      padding: 15rem 0 5rem;
+    }
+
+    .title {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+  }
+}
+
+.page-id-17 #hero .hero-inner,
+.page-id-19 #hero .hero-inner {
+  padding: 2rem 0 1rem;
+  @media only screen and (min-width: $breakpoint-md)  {
+    padding: 4rem 0 1.5rem;
+  }
+}
+
+.no-hero {
+  background-image: -webkit-gradient(
+                  linear,
+                  left top,
+                  left bottom,
+                  color-stop(0, #97B8BF),
+                  color-stop(1, #F4F4F4)
+  );
+  background-image: -o-linear-gradient(bottom, #97B8BF 0%, #F4F4F4 100%);
+  background-image: -moz-linear-gradient(bottom, #97B8BF 0%, #F4F4F4 100%);
+  background-image: -webkit-linear-gradient(bottom, #97B8BF 0%, #F4F4F4 100%);
+  background-image: -ms-linear-gradient(bottom, #97B8BF 0%, #F4F4F4 100%);
+  background-image: linear-gradient(to bottom, #97B8BF 0%, #F4F4F4 100%);
+
+  > .container {
+    padding: 35px 15px 50px 15px;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+#wrapper-footer {
+  a {
+    color: $link-reverse;
+  }
+  p {
+    margin: 0;
+  }
+
+  #wrapper-footer-top {
+    background-color: $gray-light;
+    color: $reverse;
+    padding: 1rem 0;
+
+    .container {
+      text-align: center;
+    }
+    p {
+      @extend .serif;
+    }
+
+    .wpforms-container {
+      margin: 0 20%;
+
+      input {
+        background-color: rgb(255,255,255,.6);
+        color: #333;
+        font-size: .8rem;
+
+        ::placeholder {
+          color: $reverse;
+        }
+      }
+
+      button {
+        background-color: rgb(255,255,255,.1);
+        border: 1px solid $reverse;
+        text-transform: uppercase;
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: .8rem;
+      }
+
+    }
+  }
+
+  #wrapper-footer-mid {
+    background-color: $blue;
+    color: $reverse;
+    padding: 2rem 0;
+    font-size: 80%;
+  }
+
+  #wrapper-footer-bot {
+    background-color: #000000;
+    color: $reverse;
+    padding: .5rem 0;
+    font-size: 70%;
+  }
+}
+
+
+
+/* homepage */
+body.home #page > .wrapper {
+  padding-bottom: 0;
+}
+
+#home_hero_slider {
+  margin-bottom: 1.5rem;
+  .owl-item {
+    .container {
+
+      blockquote {
+        margin: 0;
+        background: rgb(255,255,255,.65);
+        width: 55%;
+        padding: 5px 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h2,h3,h4 {
+        font-size: 1.1rem;
+        margin-bottom: .25rem;
+        @extend .serif;
+      }
+      p {
+        font-size: .7rem;
+        line-height: 1.1;
+        margin-bottom: 5px;
+      }
+
+      @media only screen and (min-width: $breakpoint-md)  {
+        blockquote {
+          width: 45%;
+          padding: 20px;
+          top: 70%;
+          transform: translateY(-70%);
+        }
+        h2,h3,h4 {
+          font-size: 1.6rem;
+          margin-bottom: .3rem;
+        }
+        p {
+          font-size: .75rem;
+          line-height: 1.15;
+        }
+      }
+      @media only screen and (min-width: $breakpoint-lg)  {
+        blockquote {
+          width: 35%;
+          padding: 20px;
+        }
+        h2,h3,h4 {
+          font-size: 1.9rem;
+          margin-bottom: .4rem;
+        }
+        p {
+          font-size: .8rem;
+          line-height: 1.2;
+        }
+      }
+
+    }
+  }
+}
+
+body.home .wp-block-table.is-style-stripes {
+  border-bottom: 0 none;
+}
+
+body.home .quote {
+  margin-left: auto;
+
+  >.p-1, >.p-3, >.p-5 {
+    padding: 1rem 5rem 1rem 5rem !important;
+    font-style: italic;
+    //margin: 1rem auto;
+    background-color: $gray-light;
+  }
+
+  @media only screen and (min-width: $breakpoint-lg)  {
+    >.p-1, >.p-3, >.p-5 {
+      padding: 1rem 5rem 1rem 3rem !important;
+      border-left: 2px solid $gray;
+      margin: 1rem 1rem 2rem 1rem;
+      background-color: #ffffff;
+    }
+  }
+}
+
+body.home .row.events-row {
+  //@extend .bg-gray;
+
+  figure.wp-block-image {
+    display: none;
+  }
+
+  @media only screen and (min-width: $breakpoint-md)  {
+    figure.wp-block-image {
+      display: block;
+      text-align: right;
+      margin: 1rem 30px 1rem auto;
+
+      img {
+        max-height: 350px;
+        width: auto;
+        margin: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-lg)  {
+    figure.wp-block-image {
+      margin: -20% 30px 0 auto;
+    }
+  }
+
+  .next-event {
+    margin: 20px 0 0 50px;
+  }
+
+  #ect-events-list-content {
+    @extend .serif;
+    color: $reverse;
+    a {
+      color: $reverse;
+    }
+
+    .ect-list-post-left {
+
+    }
+  }
+}
+
+.bg-site-secondary {
+  background-color: #F4856E;
+}
+
+p.intro, .wp-block-group.intro {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+  @media only screen and (min-width: $breakpoint-md) {
+    font-size: 1.3rem;
+    margin: 0 4rem 4rem 4rem;
+  }
+}
+
+.split-text-image {
+  @extend .my-5;
+
+  .wp-block-image {
+    margin-bottom: 0;
+    @extend .img-object-fit;
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+  h6 {
+    font-size: 1.4rem;
+  }
+
+  .col.areoi-element {
+    min-height: 200px;
+    padding: 0;
+  }
+
+  .areoi-background .col {
+    position: static;
+  }
+
+  .areoi-background__color,
+  .areoi-background__image {
+    border-radius: 60px;
+  }
+  .vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+
+  .split-text {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+
+    p {
+      @extend .serif;
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+    li {
+      @extend .serif;
+      font-size: 1.35rem;
+      margin-bottom: 0;
+    }
+    a {
+      font-size: 1.1rem;
+    }
+
+    & > .wp-block-group {
+      border: 10px solid $red;
+      width: 100%;
+      display: flex;
+
+      & > .wp-block-group__inner-container {
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    & > .wp-block-group {
+      border-radius: 0 0 60px 60px;
+      border-width: 0 4px 4px 4px;
+    }
+
+  }
+
+  > .row div.split-text:first-child {
+    /* if text is on the left, move it below the image for sm screens only */
+    order: 10;
+  }
+
+  > .row > div.col-12 {
+    /* the image cell when the text is on the right */
+    .areoi-background__color,
+    .areoi-background__image {
+      border-radius: 60px 60px 0 0;
+    }
+  }
+  > .row .split-text + div.col-12 {
+    /* the image cell when the text is on the left */
+    .areoi-background__color,
+    .areoi-background__image {
+      border-radius: 60px 60px 0 0;
+    }
+  }
+
+
+  @media only screen and (min-width: $breakpoint-md)  {
+    .vertical-center {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .col.areoi-element {
+      min-height: 300px;
+    }
+
+    .split-text {
+      p {
+        font-size: 1.5rem;
+      }
+      a {
+        font-size: 1.2rem;
+      }
+      & > .wp-block-group {
+        border: 10px solid $red;
+
+        & > .wp-block-group__inner-container {
+          padding: 30px 60px;
+        }
+      }
+
+      &.tl > .wp-block-group {
+        border-radius: 60px 0 0 0;
+        border-width: 10px 0 10px 10px;
+      }
+      &.tr > .wp-block-group {
+        border-radius: 0 60px 0 0;
+        border-width: 10px 10px 10px 0;
+      }
+      &.br > .wp-block-group {
+        border-radius: 0 0 60px 0;
+        border-width: 10px 10px 10px 0;
+      }
+      &.bl > .wp-block-group {
+        border-radius: 0 0 0 60px;
+        border-width: 10px 0 10px 10px;
+      }
+    }
+
+    > .row div.split-text:first-child {
+      /* if text is on the left, move it below the image for sm screens only */
+      order: initial;
+    }
+
+    > .row > div.col-12 {
+      /* the image cell when the text is on the right */
+      .areoi-background__color,
+      .areoi-background__image {
+        border-radius: 60px 0 0 60px;
+      }
+    }
+    > .row .split-text + div.col-12 {
+      /* the image cell when the text is on the left */
+      .areoi-background__color,
+      .areoi-background__image {
+        border-radius: 0 60px 60px 0;
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+/* End Custom CSS */

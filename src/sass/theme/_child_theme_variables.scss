@@ -1,0 +1,51 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+$font-family-base: "Lato", Sans-serif;
+
+$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$blue: #091F5C;
+$red: #ED4545;
+$background: #0C2A43;
+$gray: #97B8BF;
+$blue-light: #B9DFC2; //https://meyerweb.com/eric/tools/color-blend/#D52B2E:000000:10:hex
+$gray-light: #C5D0DC; //#DED9E8;
+$white: #ffffff;
+$offwhite: #F3F0ED;
+$reverse: $offwhite;
+$primary: $blue;  // Once we've changed the value, we'll also make it the primary brand color.
+$link-primary: $primary;
+$link-reverse: $offwhite;
+
+/*
+
+$brand-primary: #1D1753;
+
+$primary: #56AAA4;
+$primaryRed: #d52b2e;
+$primary_dark: #56AAA4;
+$secondary: #F37064;
+$secondary_lightest: #F37064;//https://meyerweb.com/eric/tools/color-blend/#007994:FFFFFF:10:hex
+$secondary_light: #F37064;//https://meyerweb.com/eric/tools/color-blend/#007994:FFFFFF:10:hex
+$secondary_dark: #F37064;
+$secondary_gray: #97B8BF;//https://meyerweb.com/eric/tools/color-blend/#8BC2CE:A6ABAD:10:hex
+$dark: #ACA9D3;
+$darker: #ACA9D3;
+$primary_medium: #B9DFC2; //https://meyerweb.com/eric/tools/color-blend/#D52B2E:000000:10:hex
+$site-bg: #F4F4F4;
+$gray_medium: #DED9E8;
+$reverse: #ffffff;
+$link-primary: $primary;
+$link-reverse: #ffffff;
+
+$breakpoint-md: 768px;
+$breakpoint-md-max: 991px;
+$breakpoint-lg: 992px;
+
+ */
+
+$breakpoint-mob-menu-end: 768px;
+$breakpoint-md: 768px;
+$breakpoint-md-max: 991px;
+$breakpoint-lg: 992px;
